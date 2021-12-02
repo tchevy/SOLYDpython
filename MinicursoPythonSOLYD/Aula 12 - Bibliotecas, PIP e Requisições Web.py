@@ -1,9 +1,19 @@
 import requests
+import time
 
+cabecalho = {'Uer-agente': 'Windows 2022',
+             'Referer':'https://googgle.com'}
                         #import Beautiful Soup 4 BS4 pip install bs4
+
+meus_cookies = {'Ultima-Visita': '01-12-2021'}
+dados = {'username': 'tchevy',
+         'password': 'qwe123'}
 texto = None
 try:
-    requisicao = requests.get('https://putsreq.com/LZKDmO54nggSWu1c302a')
+    requisicao = requests.post('https://putsreq.com/jqAHeP8aIP8RFayEpbP1',
+                              headers=cabecalho,
+                              cookies=meus_cookies,
+                              data=dados)
     texto = requisicao.text
 except Exception as e:
     print("A requisição deu erro:", e )
