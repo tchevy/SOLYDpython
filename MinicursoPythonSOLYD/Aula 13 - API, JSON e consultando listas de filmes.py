@@ -31,3 +31,4 @@ else:
          printar_detalhes(filme)
 
 #print(req.text)
+
