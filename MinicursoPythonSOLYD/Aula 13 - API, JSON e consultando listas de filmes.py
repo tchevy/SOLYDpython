@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 def requisicao(titulo):
      try:
        req = requests.get('http://img.omdbapi.com/?apikey=[3bb7744d]&' + titulo)
